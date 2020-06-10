@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChuckNorrisJokes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAQ-AM-QlK">
+                                <rect key="frame" x="80" y="612" width="254" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="THH-i9-rgK"/>
+                                </constraints>
+                                <state key="normal" title="New joke">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="newJokeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C0N-67-Tev"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chuck Norris joke" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4n-DD-D0L">
+                                <rect key="frame" x="60" y="124" width="294" height="408"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqE-TM-Qre">
+                                <rect key="frame" x="132" y="752" width="150" height="50"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KBv-qa-rcZ"/>
+                                    <constraint firstAttribute="width" constant="150" id="oId-dU-f2T"/>
+                                </constraints>
+                                <state key="normal" title="Try with Alamofire">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="X2k-9a-wwA" kind="show" id="4ys-In-ujA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lqE-TM-Qre" secondAttribute="bottom" constant="60" id="12d-M5-D2U"/>
+                            <constraint firstItem="q4n-DD-D0L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="1F5-1O-sNH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q4n-DD-D0L" secondAttribute="trailing" constant="60" id="JwG-rb-gIz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aAQ-AM-QlK" secondAttribute="bottom" constant="200" id="T7n-Xa-qlP"/>
+                            <constraint firstItem="aAQ-AM-QlK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="ZhC-js-Phw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aAQ-AM-QlK" secondAttribute="trailing" constant="80" id="k73-qT-7Vk"/>
+                            <constraint firstItem="lqE-TM-Qre" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mKN-xy-8W0"/>
+                            <constraint firstItem="aAQ-AM-QlK" firstAttribute="top" secondItem="q4n-DD-D0L" secondAttribute="bottom" constant="80" id="mUk-am-dLn"/>
+                            <constraint firstItem="q4n-DD-D0L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="upM-W0-JcC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="chuckNorrisJokeLbl" destination="q4n-DD-D0L" id="Jyb-5j-0HI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-128" y="143"/>
+        </scene>
+        <!--Alamofire Jokes View Controller-->
+        <scene sceneID="Q68-0c-4lo">
+            <objects>
+                <viewController id="X2k-9a-wwA" customClass="AlamofireJokesViewController" customModule="ChuckNorrisJokes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e4C-jY-TKn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chuck Norris joke" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEt-3f-NbD">
+                                <rect key="frame" x="60" y="60" width="294" height="488"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qj6-pO-AK3">
+                                <rect key="frame" x="80" y="608" width="254" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fra-lN-pQX"/>
+                                </constraints>
+                                <state key="normal" title="New joke">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="newJokeTapped:" destination="X2k-9a-wwA" eventType="touchUpInside" id="GWD-0A-6ed"/>
+                                    <action selector="newJokeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zsc-oT-njE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hEt-3f-NbD" firstAttribute="centerX" secondItem="e4C-jY-TKn" secondAttribute="centerX" id="29c-lw-iFG"/>
+                            <constraint firstItem="qmY-0n-KAU" firstAttribute="bottom" secondItem="qj6-pO-AK3" secondAttribute="bottom" constant="150" id="5gv-eo-gUt"/>
+                            <constraint firstItem="qj6-pO-AK3" firstAttribute="top" secondItem="hEt-3f-NbD" secondAttribute="bottom" constant="60" id="KIQ-ss-fxo"/>
+                            <constraint firstItem="hEt-3f-NbD" firstAttribute="top" secondItem="qmY-0n-KAU" secondAttribute="top" constant="60" id="Ug9-sV-qC8"/>
+                            <constraint firstItem="qj6-pO-AK3" firstAttribute="leading" secondItem="qmY-0n-KAU" secondAttribute="leading" constant="80" id="XLk-ol-V1d"/>
+                            <constraint firstItem="qmY-0n-KAU" firstAttribute="trailing" secondItem="hEt-3f-NbD" secondAttribute="trailing" constant="60" id="f4l-It-317"/>
+                            <constraint firstItem="hEt-3f-NbD" firstAttribute="leading" secondItem="qmY-0n-KAU" secondAttribute="leading" constant="60" id="f8g-4L-Gb4"/>
+                            <constraint firstItem="qmY-0n-KAU" firstAttribute="trailing" secondItem="qj6-pO-AK3" secondAttribute="trailing" constant="80" id="qq4-QT-FoV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qmY-0n-KAU"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Tli-1v-kGC"/>
+                    <connections>
+                        <outlet property="jokeLbl" destination="hEt-3f-NbD" id="Fmk-8L-oN7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zqg-kP-rTY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793" y="133"/>
+        </scene>
+    </scenes>
+</document>
